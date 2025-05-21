@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Capital Lanka Pvt. Ltd</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      background-image: url('your-image.jpg'); /* <-- Change this to your image path */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5); /* Optional: background overlay */
+      border-radius: 10px;
+    }
+
+    #animated-text {
+      color: #fff;
+      font-size: 6vw; /* Responsive font size */
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="animated-text"></h1>
+  </div>
+
+  <script>
+    const text = "Capital Lanka Pvt. Ltd";
+    const animatedText = document.getElementById("animated-text");
+
+    let index = 0;
+
+    function typeLetter() {
+      if (index < text.length) {
+        animatedText.innerHTML += text[index];
+        index++;
+        setTimeout(typeLetter, 200); // Delay between letters
+      }
+    }
+
+    typeLetter();
+  </script>
+</body>
+</html>
