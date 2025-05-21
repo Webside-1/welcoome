@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome - CapitalLanka</title>
+  <meta name="description" content="Welcome to Capital Lanka Group (Pvt) Ltd – Choose your language to continue." />
   <style>
     body {
       margin: 0;
       padding: 0;
       background: #ffffff;
       overflow: hidden;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .container {
@@ -30,6 +31,7 @@
     .logo img {
       width: 120px;
       height: auto;
+      max-width: 100%;
     }
 
     .text {
@@ -76,11 +78,12 @@
       margin-top: 40px;
     }
 
-    .buttons button {
+    .buttons a {
       padding: 12px 24px;
       font-size: 1em;
       margin: 10px;
-      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
       border: none;
       border-radius: 8px;
       background-color: #1E90FF;
@@ -88,21 +91,21 @@
       transition: background 0.3s;
     }
 
-    .buttons button:hover {
+    .buttons a:hover {
       background-color: #005bb5;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="logo" href="https://i.ibb.co/3QNyPjc/Whats-App-Image-2025-05-14-at-11-11-50-db83447a.png">
-      <img src="https://i.ibb.co/3QNyPjc/Whats-App-Image-2025-05-14-at-11-11-50-db83447a.png" alt="Capital Lanka Logo" />
+    <a class="logo" href="https://i.ibb.co/3QNyPjc/Whats-App-Image-2025-05-14-at-11-11-50-db83447a.png" aria-label="Capital Lanka Logo">
+      <img loading="lazy" src="https://i.ibb.co/3QNyPjc/Whats-App-Image-2025-05-14-at-11-11-50-db83447a.png" alt="Capital Lanka Logo" />
     </a>
     <div class="text welcome">Welcome</div>
     <div class="subtext company">Capital Lanka Group (Pvt) Ltd</div>
     <div class="buttons">
-      <button onclick="window.location.href='https://webside-1.github.io/online-loan/'">English</button>
-      <button onclick="window.location.href='https://webside-1.github.io/online-loan/si'">සිංහල</button>
+      <a href="https://webside-1.github.io/online-loan/">English</a>
+      <a href="https://webside-1.github.io/online-loan-si/">සිංහල</a>
     </div>
   </div>
 </body>
