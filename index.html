@@ -1,45 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CapitalLanka</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome - CapitalLanka</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: white; /* මොකද්ද background එක? */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      flex-direction: column;
+      background: #000;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    #logo {
-      width: 150px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 30px;
+    }
+
+    .logo img {
+      width: 120px;
       height: auto;
     }
 
-    h1 {
-      color: #0056b3;
-      font-family: sans-serif;
-      margin: 20px 0;
+    .text {
+      font-size: 3em;
+      font-weight: bold;
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideIn 1.5s forwards;
     }
 
-    button {
-      padding: 10px 20px;
-      background-color: #0056b3;
-      color: white;
+    .subtext {
+      font-size: 1.8em;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateX(100%);
+      animation: slideInSub 1.5s forwards 1s;
+    }
+
+    .welcome {
+      color: #1E90FF; /* lamala blue */
+    }
+
+    .company {
+      background: linear-gradient(to right, black 50%, #1E90FF 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInSub {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    .buttons button {
+      padding: 12px 24px;
+      font-size: 1em;
+      margin: 10px;
+      cursor: pointer;
       border: none;
-      border-radius: 5px;
-      font-size: 16px;
+      border-radius: 8px;
+      background-color: #1E90FF;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #005bb5;
     }
   </style>
 </head>
 <body>
- <img id="logo" src="https://i.ibb.co/3QNyPjc/Whats-App-Image-2025-05-14-at-11-11-50-db83447a.png" />
-  <h1>CapitalLanka P.V.T LTD</h1>
-  <button>Apply for Loan</button>
+  <div class="container">
+    <a class="logo" href="https://your-logo-link.com">
+      <img src="https://your-logo-url.com/logo.png" alt="Logo" />
+    </a>
+    <div class="text welcome">Welcome</div>
+    <div class="subtext company">CapitalLanka p.v.t.ltd</div>
+    <div class="buttons">
+      <button onclick="window.location.href='https://your-link.com/en'">English</button>
+      <button onclick="window.location.href='https://your-link.com/si'">සිංහල</button>
+    </div>
+  </div>
 </body>
 </html>
